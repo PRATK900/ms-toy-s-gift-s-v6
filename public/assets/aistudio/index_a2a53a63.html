@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#18365B">
+  <meta name="description" content="M.S. Toys & Gifts — Ahmedabad's premier toy, gift, stationery, and home décor destination across 3 retail stores with over 4,000 curated products.">
+  <title>M.S. Toys &amp; Gifts | Little joys. Big smiles. — Ahmedabad</title>
+  <!-- 3. Typography System: Outfit, DM Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- 9. Ambient Background Motion -->
+  <div class="ambient-canvas" aria-hidden="true">
+    <div class="ambient-orb orb-coral"></div>
+    <div class="ambient-orb orb-sky"></div>
+    <div class="ambient-orb orb-marigold"></div>
+  </div>
+
+  <!-- 10. Animated Brand Logo Initial Loading Screen -->
+  <div class="brand-loader" id="brand-loader" role="status" aria-label="Loading M.S. Toys and Gifts">
+    <div class="loader-logo-stage">
+      <svg class="animated-brand-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- 1. Gift-box symbol appears -->
+        <g class="logo-box-group">
+          <rect x="24" y="46" width="72" height="54" rx="10" fill="#18365B" />
+          <rect x="18" y="32" width="84" height="18" rx="7" fill="#E9787B" />
+        </g>
+        <!-- 2. Ribbon draws around the gift box -->
+        <path class="logo-ribbon-path" d="M60 32V100M24 68H96M60 32C48 16 32 20 38 30C42 35 55 32 60 32ZM60 32C72 16 88 20 82 30C78 35 65 32 60 32Z" stroke="#F2B544" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- 3. M.S. initials fade into view -->
+        <g class="logo-initials">
+          <rect x="37" y="61" width="46" height="24" rx="6" fill="#FFF9F0"/>
+          <text x="60" y="78" text-anchor="middle" fill="#18365B" font-family="Outfit, sans-serif" font-weight="700" font-size="15" letter-spacing="1">M.S.</text>
+        </g>
+        <!-- 4. Small sparkle appears -->
+        <g class="logo-sparkle" transform="translate(96, 20)">
+          <path d="M0 -10L2.8 -2.8L10 0L2.8 2.8L0 10L-2.8 2.8L-10 0L-2.8 -2.8Z" fill="#F2B544"/>
+        </g>
+      </svg>
+    </div>
+    <div class="loader-text">
+      <div class="loader-title">M.S. Toys &amp; Gifts</div>
+      <div class="loader-sub">Little joys. Big smiles. • Ahmedabad</div>
+    </div>
+    <button type="button" class="loader-skip" id="loader-skip-btn">Continue to Store →</button>
+  </div>
+
+  <!-- Reusable Crisp Brand SVG Vector Symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="icon-wa">
+        <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.08-1.34C8.52 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z" fill="currentColor"/>
+        <path d="M8.5 8.5c-.3 0-.8.3-.8 1.2 0 1.4 1.2 3.2 2.7 4.5 1.5 1.3 3.2 1.8 4.2 1.8.9 0 1.4-.6 1.4-1.2 0-.3-.2-.5-.5-.7l-1.5-.7c-.3-.1-.5 0-.7.3l-.5.6c-.2.2-.4.2-.7 0-.8-.5-1.9-1.5-2.3-2.3-.1-.3-.1-.5.1-.7l.5-.5c.2-.2.3-.5.2-.7l-.7-1.5c-.2-.4-.4-.5-.7-.5z" fill="#fff"/>
+      </g>
+      <g id="vec-car">
+        <path d="M8 28h32v8a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4v-8z" fill="#E9787B" stroke="#18365B" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M13 28l4-11h14l4 11H13z" fill="#EAF5FA" stroke="#18365B" stroke-width="2.4" stroke-linejoin="round"/>
+        <circle cx="15" cy="36" r="5" fill="#F2B544" stroke="#18365B" stroke-width="2.4"/>
+        <circle cx="33" cy="36" r="5" fill="#F2B544" stroke="#18365B" stroke-width="2.4"/>
+      </g>
+      <g id="vec-gift">
+        <rect x="10" y="20" width="28" height="20" rx="3" fill="#E9787B" stroke="#18365B" stroke-width="2.4"/>
+        <rect x="8" y="14" width="32" height="7" rx="2" fill="#FCEEEF" stroke="#18365B" stroke-width="2.4"/>
+        <rect x="21" y="14" width="6" height="26" fill="#F2B544" stroke="#18365B" stroke-width="2.4"/>
+        <path d="M24 14c-4-6-10-4-9 0s9 0 9 0zm0 0c4-6 10-4 9 0s-9 0-9 0z" fill="#F2B544" stroke="#18365B" stroke-width="2.4" stroke-linejoin="round"/>
+      </g>
+      <g id="vec-teddy">
+        <circle cx="14" cy="14" r="5" fill="#F2B544" stroke="#18365B" stroke-width="2.4"/>
+        <circle cx="34" cy="14" r="5" fill="#F2B544" stroke="#18365B" stroke-width="2.4"/>
+        <circle cx="24" cy="23" r="12" fill="#F7F0E5" stroke="#18365B" stroke-width="2.4"/>
+        <ellipse cx="24" cy="26" rx="5" ry="4" fill="#FFFFFF" stroke="#18365B" stroke-width="2"/>
+        <circle cx="20" cy="20" r="1.8" fill="#18365B"/>
+        <circle cx="28" cy="20" r="1.8" fill="#18365B"/>
+        <circle cx="24" cy="24.5" r="1.8" fill="#18365B"/>
+        <path d="M18 34l6 3 6-3-6 5-6-5z" fill="#E9787B" stroke="#18365B" stroke-width="2" stroke-linejoin="round"/>
+      </g>
+      <g id="vec-baby">
+        <rect x="15" y="18" width="18" height="22" rx="5" fill="#EAF5FA" stroke="#18365B" stroke-width="2.4"/>
+        <rect x="13" y="14" width="22" height="5" rx="2.5" fill="#E9787B" stroke="#18365B" stroke-width="2.4"/>
+        <path d="M20 14v-4a4 4 0 0 1 8 0v4" fill="#F2B544" stroke="#18365B" stroke-width="2.4"/>
+        <line x1="20" y1="24" x2="25" y2="24" stroke="#18365B" stroke-width="2.2" stroke-linecap="round"/>
+        <line x1="20" y1="29" x2="27" y2="29" stroke="#18365B" stroke-width="2.2" stroke-linecap="round"/>
+        <line x1="20" y1="34" x2="25" y2="34" stroke="#18365B" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+      <g id="vec-puzzle">
+        <path d="M14 14h8a4 4 0 1 1 6 0h6v8a4 4 0 1 1 0 6v6H14v-6a4 4 0 1 0 0-6v-8z" fill="#69B6D6" stroke="#18365B" stroke-width="2.4" stroke-linejoin="round"/>
+      </g>
+      <g id="vec-balloon">
+        <ellipse cx="24" cy="20" rx="11" ry="13" fill="#E9787B" stroke="#18365B" stroke-width="2.4"/>
+        <path d="M22 33h4l-2 3-2-3z" fill="#F2B544" stroke="#18365B" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M24 36c0 3-3 4-3 7" fill="none" stroke="#18365B" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M18 15c1-3 3-4 5-4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+      </g>
+      <g id="vec-pencil">
+        <path d="M31 11l6 6-18 18-8 2 2-8 18-18z" fill="#F2B544" stroke="#18365B" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M28 14l6 6" stroke="#18365B" stroke-width="2.4"/>
+        <path d="M13 29l6 6" stroke="#18365B" stroke-width="2.4"/>
+      </g>
+      <g id="vec-home">
+        <path d="M10 22L24 10l14 12v16a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2V22z" fill="#F7F0E5" stroke="#18365B" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M8 23L24 9l16 14" fill="none" stroke="#E9787B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="20" y="27" width="8" height="13" fill="#69B6D6" stroke="#18365B" stroke-width="2.4"/>
+      </g>
+    </defs>
+  </svg>
+
+  <!-- Top Store Announcement Bar -->
+  <div class="top-announcement">
+    <div class="wrap top-announcement-inner">
+      <div class="top-badge-pill">
+        <span class="top-badge-dot"></span>
+        <span>Ahmedabad's Trusted Toy, Gift, Décor &amp; Stationery Destination • <strong>4,000+ Curated Products</strong></span>
+      </div>
+      <div class="top-locations-Trigger">
+        <span>📍 3 Physical Stores in Ahmedabad, Gujarat</span>
+        <a href="#stores">View Store Timings &amp; Directions →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: NAVIGATION -->
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="M.S. Toys and Gifts, Home">
+        <img class="brand-logo-img" src="images/logo-horizontal.webp" alt="M.S. Toys &amp; Gifts">
+      </a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary Navigation">
+        <a class="nav-link-underline" href="#shop">Categories</a>
+        <a class="nav-link-underline" href="#picks">Featured</a>
+        <a class="nav-link-underline" href="#new-arrivals">New Arrivals</a>
+        <a class="nav-link-underline" href="#catalogue">4,000+ Catalogue</a>
+        <a class="nav-link-underline" href="#gift-inspiration">Gift Studio</a>
+        <a class="nav-link-underline" href="#stores">Our 3 Stores</a>
+        <a class="nav-link-underline" href="#story">About Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="store-pill-btn" href="#stores" title="Visit our 3 stores in Ahmedabad">
+          <span>🏬 3 Stores • Ahmedabad</span>
+        </a>
+        <a class="btn btn-coral btn-sm" data-wa data-msg="Hi M.S. Toys & Gifts! I'd like to enquire about your products.">
+          <svg class="btn-icon-wa" viewBox="0 0 24 24"><use href="#icon-wa"/></svg>
+          <span>Contact Us</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- SECTION 2: HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow-tag" data-char-reveal>
+            AHMEDABAD • 3 RETAIL STORES • EST. 2012
+          </div>
+          <h1 class="anim-blur-reveal">
+            Little joys.<br>
+            <span class="text-highlight highlight-coral">Big</span> <span class="text-gradient-animated">smiles.</span>
+          </h1>
+          <p class="hero-lead" data-word-reveal>
+            From playful toys and adorable soft toys to thoughtful gifts and everyday essentials, discover something special for every occasion.
+          </p>
+          <div class="cta-row reveal-up" style="--delay: 180ms;">
+            <a class="btn btn-coral" href="#shop">Discover our collections</a>
+            <a class="btn btn-navy" href="#catalogue">Browse 4,000+ Catalogue</a>
+            <a class="btn btn-outline" data-wa data-msg="Hi! I'm looking for a gift at M.S. Toys & Gifts. Can you help?">
+              <svg class="btn-icon-wa" viewBox="0 0 24 24" style="color:var(--wa-green)"><use href="#icon-wa"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-trust-bar reveal-up" style="--delay: 260ms;">
+            <div class="trust-metric">
+              <strong>4,000+</strong>
+              <span>Curated Toys &amp; Gifts</span>
+            </div>
+            <div class="trust-metric">
+              <strong>3 Stores</strong>
+              <span>Across Ahmedabad</span>
+            </div>
+            <div class="trust-metric">
+              <strong>8 Departments</strong>
+              <span>From Newborn to Home Décor</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. 3D Spatial Scroll & Tilt Hero Showcase -->
+        <div class="hero-3d-stage reveal-up" id="hero-3d-stage" style="--delay: 140ms;">
+          <div class="hero-3d-card img-ambient-glow" id="hero-3d-card">
+            <!-- Floating Brand Badge Top -->
+            <div class="hero-floating-badge hero-badge-top img-floating">
+              <img class="hero-stacked-mini" src="images/logo-stacked.webp" alt="M.S. Toys &amp; Gifts Emblem">
+              <div class="badge-meta">
+                <strong>Editorial Quality &amp; Play</strong>
+                <span>Handpicked for Ahmedabad families</span>
+              </div>
+            </div>
+
+            <!-- Main Hero Visual with Light Sweep & Subtle Lens Flare -->
+            <div class="hero-main-photo-wrap img-light-sweep sweep-once img-lens-flare">
+              <span class="lens-flare-badge" aria-hidden="true"></span>
+              <img src="images/hero-showcase.webp" alt="M.S. Toys and Gifts curated wooden toys, coral gift box with golden marigold ribbon, and plush teddy bear">
+            </div>
+
+            <!-- Floating Store Availability Pill Bottom -->
+            <div class="hero-floating-badge hero-badge-bottom img-floating-delayed">
+              <span style="width:40px;height:40px;border-radius:10px;background:var(--marigold-soft);display:grid;place-items:center;font-size:1.2rem;">🎁</span>
+              <div class="badge-meta">
+                <strong>Instant WhatsApp Concierge</strong>
+                <span>Live stock check across all 3 stores</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PRODUCT CATEGORIES (ALL 8 REQUIRED CATEGORIES) -->
+    <section class="section section-cream" id="shop">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-left">
+            <span class="eyebrow-tag">8 CURATED DEPARTMENTS</span>
+            <h2 class="anim-mask-reveal"><span class="mask-inner">Explore our <span class="text-highlight">collections</span></span></h2>
+            <p class="anim-blur-reveal">Select any department to filter our multi-store catalogue or start a direct WhatsApp chat with our in-store specialists.</p>
+          </div>
+          <a class="btn btn-outline btn-sm" href="#catalogue">View Complete Catalogue →</a>
+        </div>
+
+        <div class="cat-grid" id="categories-grid" aria-label="Product Categories"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FEATURED PRODUCTS (HORIZONTAL SCROLLING SLIDESHOW) -->
+    <section class="section section-white" id="picks">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-left">
+            <span class="eyebrow-tag">CURATED HIGHLIGHTS</span>
+            <h2 class="anim-mask-reveal"><span class="mask-inner">Featured <span class="editorial-serif">from the shelves</span></span></h2>
+            <p class="anim-blur-reveal">Signature favourites loved by families across Ahmedabad—swipe horizontally or use the controls to explore.</p>
+          </div>
+          <div class="carousel-controls" aria-label="Slideshow Navigation">
+            <button type="button" class="carousel-btn" id="slide-prev-btn" aria-label="Previous featured products">←</button>
+            <button type="button" class="carousel-btn" id="slide-next-btn" aria-label="Next featured products">→</button>
+          </div>
+        </div>
+
+        <div class="horizontal-slideshow" id="featured-slideshow" role="region" aria-label="Featured Products Carousel"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: NEW ARRIVALS (CLEAN PRODUCT GRID) -->
+    <section class="section" id="new-arrivals">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-left">
+            <span class="eyebrow-tag">JUST UNBOXED</span>
+            <h2 class="anim-mask-reveal"><span class="mask-inner">New <span class="text-highlight highlight-coral">arrivals</span> this week</span></h2>
+            <p class="anim-blur-reveal">Freshly stocked across Shop 1, Shop 2, and Shop 3. Tap any item to inspect store-wise availability.</p>
+          </div>
+          <button type="button" class="btn btn-navy btn-sm" onclick="setCatalogueFilter({ tagFilter: 'NEW' }); document.getElementById('catalogue').scrollIntoView({behavior:'smooth'});">
+            See All New Arrivals →
+          </button>
+        </div>
+
+        <div class="product-grid" id="new-arrivals-grid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: SCALABLE 4,000+ PRODUCT CATALOGUE SYSTEM -->
+    <section class="section section-white" id="catalogue">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-left">
+            <span class="eyebrow-tag">SCALABLE MULTI-STORE ARCHITECTURE</span>
+            <h2 class="anim-mask-reveal"><span class="mask-inner">Interactive <span class="text-highlight">Product Catalogue</span></span></h2>
+            <p class="anim-blur-reveal">Engineered for 4,000+ products across our 3 Ahmedabad stores. Search by name, SKU, or brand, filter by store stock, or bulk-import products via CSV.</p>
+          </div>
+          <div class="cta-row">
+            <button type="button" class="btn btn-outline btn-sm" id="simulate-4000-btn" title="Stress-test the catalogue with 4,200 products">
+              ⚡ Load 4,200+ SKU Demo Dataset
+            </button>
+            <button type="button" class="btn btn-coral btn-sm" id="open-csv-modal-btn">
+              📥 Bulk CSV / Excel Import
+            </button>
+          </div>
+        </div>
+
+        <div class="catalogue-shell">
+          <!-- Search, Subcategory & Store Availability Filter Bar -->
+          <div class="catalogue-toolbar">
+            <div class="search-input-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              <input type="search" id="cat-search-input" class="catalogue-input" placeholder="Search 4,000+ items by name, SKU (e.g. MS-1001), brand..." aria-label="Search products">
+            </div>
+
+            <div>
+              <select id="cat-subcategory-select" class="catalogue-select" aria-label="Filter by subcategory">
+                <option value="ALL">All Subcategories</option>
+              </select>
+            </div>
+
+            <div>
+              <select id="cat-store-select" class="catalogue-select" aria-label="Filter by store availability">
+                <option value="ALL">All 3 Ahmedabad Stores</option>
+                <option value="shop1">Shop 1: Gifts, Home &amp; Office Décor</option>
+                <option value="shop2">Shop 2: Toys for All Age Groups</option>
+                <option value="shop3">Shop 3: Superstore (Gifts + Toys + Stationery)</option>
+              </select>
+            </div>
+
+            <div class="filter-pill-group" role="group" aria-label="Product status filter">
+              <button type="button" class="filter-pill active" data-tag-pill="ALL">All</button>
+              <button type="button" class="filter-pill" data-tag-pill="FEATURED">★ Featured</button>
+              <button type="button" class="filter-pill" data-tag-pill="NEW">✨ New</button>
+            </div>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="catalogue-filter-pills">
+            <div class="filter-pill-group" id="cat-category-pills" role="group" aria-label="Category filter"></div>
+          </div>
+
+          <!-- Status Bar -->
+          <div class="catalogue-status-bar">
+            <span id="catalogue-status-text">Showing products...</span>
+            <span class="badge-pill badge-sku" id="total-db-count">16 Products Indexed</span>
+          </div>
+
+          <!-- Paginated Product Grid -->
+          <div class="product-grid" id="catalogue-grid"></div>
+
+          <!-- Fast Pagination Controls -->
+          <div class="catalogue-pagination" aria-label="Catalogue Pagination">
+            <button type="button" class="btn btn-outline btn-sm" id="cat-prev-page">← Previous Page</button>
+            <div class="page-numbers" id="catalogue-page-numbers"></div>
+            <button type="button" class="btn btn-outline btn-sm" id="cat-next-page">Next Page →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: GIFT INSPIRATION & PRESERVED CONCIERGE ("WHO IT'S FOR" + "GIFT HELP") -->
+    <section class="section section-cream" id="gift-inspiration">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-left">
+            <span class="eyebrow-tag">THE ART OF THOUGHTFUL GIFTING</span>
+            <h2 class="anim-mask-reveal"><span class="mask-inner">Editorial <span class="editorial-serif">Gift Inspiration</span></span></h2>
+            <p class="anim-blur-reveal">Whether celebrating a first birthday, a festive family gathering, or a quiet everyday milestone, explore our curated gifting suites.</p>
+          </div>
+        </div>
+
+        <div class="inspiration-editorial-grid">
+          <!-- Large Editorial Image Card with Light Sweep & Parallax -->
+          <article class="inspiration-feature-card img-clip-reveal img-light-sweep">
+            <img src="images/gift-inspiration.webp" alt="Curated luxury gift hampers with golden marigold satin ribbons" data-parallax="0.05">
+            <div class="inspiration-feature-overlay">
+              <span class="badge-pill badge-featured" style="margin-bottom:12px;display:inline-block;">BESPOKE WRAPPING &amp; HAMPERS</span>
+              <h3>Signature Gift Atelier at Shop 1 &amp; Shop 3</h3>
+              <p>Custom-assembled gift boxes, corporate hampers, and party return-gift suites wrapped in our signature coral, ivory, and marigold ribbons.</p>
+              <a class="btn btn-coral btn-sm" data-wa data-msg="Hi! I'd like to enquire about custom gift hampers at M.S. Toys & Gifts.">
+                Consult Our Gift Stylist →
+              </a>
+            </div>
+          </article>
+
+          <!-- 4 Required Occasion Cards: Birthday, Festival, Special Occasions, Everyday Gifting -->
+          <div class="inspiration-occ-stack">
+            <article class="occ-card reveal-up" style="--delay: 40ms;">
+              <div>
+                <span class="occ-tag" style="--occ-bg: var(--light-coral);">01 • CELEBRATE</span>
+                <h3 style="margin-top:10px;">Birthday Gifts</h3>
+                <p style="font-size:0.9rem;color:var(--slate-muted);margin-top:6px;">Age-tailored playsets, plush companions, and return-gift bundles for memorable parties.</p>
+              </div>
+              <a class="nav-link-underline" data-wa data-msg="Hi! I'm looking for Birthday gift ideas.">Ask for Birthday Ideas →</a>
+            </article>
+
+            <article class="occ-card reveal-up" style="--delay: 100ms;">
+              <div>
+                <span class="occ-tag" style="--occ-bg: var(--marigold-soft);">02 • TRADITION</span>
+                <h3 style="margin-top:10px;">Festival Gifts</h3>
+                <p style="font-size:0.9rem;color:var(--slate-muted);margin-top:6px;">Diwali, Raksha Bandhan, and festive hampers paired with warm home lighting and keepsakes.</p>
+              </div>
+              <a class="nav-link-underline" data-wa data-msg="Hi! I'm looking for Festival gift hampers.">Explore Festival Hampers →</a>
+            </article>
+
+            <article class="occ-card reveal-up" style="--delay: 160ms;">
+              <div>
+                <span class="occ-tag" style="--occ-bg: var(--light-blue);">03 • MILESTONES</span>
+                <h3 style="margin-top:10px;">Special Occasions</h3>
+                <p style="font-size:0.9rem;color:var(--slate-muted);margin-top:6px;">Baby showers, housewarmings, anniversaries, and executive office inaugurations.</p>
+              </div>
+              <a class="nav-link-underline" data-wa data-msg="Hi! I'm shopping for a special occasion gift.">Shop Milestone Gifts →</a>
+            </article>
+
+            <article class="occ-card reveal-up" style="--delay: 220ms;">
+              <div>
+                <span class="occ-tag" style="--occ-bg: var(--cream);">04 • LITTLE JOYS</span>
+                <h3 style="margin-top:10px;">Everyday Gifting</h3>
+                <p style="font-size:0.9rem;color:var(--slate-muted);margin-top:6px;">Desk companions, art stationery, bedtime storybooks, and pocket-sized surprises.</p>
+              </div>
+              <a class="nav-link-underline" data-wa data-msg="Hi! I'm looking for an everyday gift surprise.">Discover Everyday Joys →</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Preserved "Who It's For" Chips & 3-Step Gift Concierge -->
+        <div class="concierge-band reveal-up" id="for-who">
+          <div>
+            <span class="eyebrow-tag" style="background:var(--white);">PERSONAL SHOPPING CONCIERGE</span>
+            <h2>Shopping for someone special?</h2>
+            <p style="margin-top:10px;color:var(--slate);">Pick who or what the gift is for, or share your budget—we will send curated photos and prices straight to your WhatsApp.</p>
+            <div class="chips">
+              <a class="chip" data-wa data-msg="Hi! I'm shopping for a baby (0 to 2 years).">Babies, 0 to 2</a>
+              <a class="chip" data-wa data-msg="Hi! I'm shopping for a toddler (3 to 5 years).">Toddlers, 3 to 5</a>
+              <a class="chip" data-wa data-msg="Hi! I'm shopping for a child (6 to 9 years).">Kids, 6 to 9</a>
+              <a class="chip" data-wa data-msg="Hi! I'm shopping for an older child (10+ years).">Big kids, 10+</a>
+              <a class="chip" data-wa data-msg="Hi! I'm looking for a birthday gift.">Birthday gift</a>
+              <a class="chip" data-wa data-msg="Hi! I need return gifts for a party.">Return gifts</a>
+              <a class="chip" data-wa data-msg="Hi! I'm looking for a baby shower gift.">Baby shower</a>
+              <a class="chip" data-wa data-msg="Hi! I need things for school.">Back to school</a>
+            </div>
+            <div style="margin-top:22px;">
+              <a class="btn btn-wa" data-wa data-msg="Hi! I need help choosing a gift. It's for ____ and my budget is ____.">
+                <svg class="btn-icon-wa" viewBox="0 0 24 24"><use href="#icon-wa"/></svg>
+                Ask us for gift ideas
+              </a>
+            </div>
+          </div>
+
+          <ol class="steps-list" id="gift-help">
+            <li>
+              <span class="step-no">1</span>
+              <div>
+                <h3>Tell us who it's for</h3>
+                <p style="font-size:0.9rem;color:var(--slate-muted);">Share their age, occasion, and what they enjoy.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-no">2</span>
+              <div>
+                <h3>Share your budget</h3>
+                <p style="font-size:0.9rem;color:var(--slate-muted);">A rough range is enough—from pocket tokens to grand hampers.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-no">3</span>
+              <div>
+                <h3>Choose from our ideas</h3>
+                <p style="font-size:0.9rem;color:var(--slate-muted);">Reserve for quick pickup at Shop 1, Shop 2, or Shop 3 in Ahmedabad.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 (HOMEPAGE): OUR THREE STORES IN AHMEDABAD -->
+    <section class="section section-white" id="stores">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-head-left">
+            <span class="eyebrow-tag">VISIT US IN AHMEDABAD, GUJARAT</span>
+            <h2 class="anim-mask-reveal"><span class="mask-inner">Our <span class="text-highlight">Three Retail Stores</span></span></h2>
+            <p class="anim-blur-reveal">Each M.S. Toys &amp; Gifts store in Ahmedabad is thoughtfully tailored so you can browse specialized collections in person.</p>
+          </div>
+          <a class="btn btn-wa btn-sm" data-wa data-msg="Hi! I'd like to visit your Ahmedabad stores. Could you share the nearest location?">
+            <svg class="btn-icon-wa" viewBox="0 0 24 24"><use href="#icon-wa"/></svg>
+            Message Before Visiting
+          </a>
+        </div>
+
+        <div class="stores-grid" id="three-stores-grid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: ABOUT US & STORE GALLERY -->
+    <section class="section" id="story">
+      <div class="wrap">
+        <div class="story-grid">
+          <div class="story-visual-stack">
+            <div class="story-main-frame img-clip-reveal img-light-sweep">
+              <img src="images/store-interior.webp" alt="Inside the M.S. Toys and Gifts boutique retail store in Ahmedabad" data-parallax="0.04">
+            </div>
+            <div class="story-quote-card reveal-up" style="--delay: 150ms;">
+              <p>“We believe the right little thing—chosen with warmth and care—can make someone’s whole day.”</p>
+            </div>
+          </div>
+
+          <div class="story-copy">
+            <span class="eyebrow-tag">OUR STORY • AHMEDABAD</span>
+            <h2 class="anim-blur-reveal">Good things <span class="editorial-serif">happen in here</span></h2>
+            <p class="story-lead">Friendly, welcoming, and trusted by families across Gujarat.</p>
+            <p style="color:var(--slate);margin-bottom:16px;">
+              M.S. Toys &amp; Gifts began with a simple promise: to bring together playful discoveries, enduring quality toys, thoughtful presents, and everyday school and home essentials under one roof.
+            </p>
+            <p style="color:var(--slate);margin-bottom:18px;">
+              Today, across our <strong>three physical stores in Ahmedabad</strong>—spanning dedicated gifting &amp; décor, an all-age toy wonderland, and our flagship stationery &amp; family superstore—we curate over 4,000 products that spark imagination and celebrate life’s milestones.
+            </p>
+            <p class="since" id="since" style="font-weight:700;color:var(--navy);margin-bottom:24px;" hidden></p>
+            <div class="cta-row">
+              <a class="btn btn-navy" href="#stores">Find Our 3 Stores</a>
+              <button type="button" class="btn btn-outline" id="replay-logo-btn">✨ Replay Brand Logo Reveal</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preserved & Enhanced Peek Inside Gallery -->
+        <div class="gallery-grid" id="gallery">
+          <figure class="gallery-tile reveal-up" style="--tile-bg:var(--light-blue);--delay:40ms;">
+            <svg class="art-svg" viewBox="0 0 48 48" aria-hidden="true"><use href="#vec-teddy"/></svg>
+            <figcaption>Soft Toys &amp; Plush</figcaption>
+          </figure>
+          <figure class="gallery-tile reveal-up" style="--tile-bg:var(--light-coral);--delay:100ms;">
+            <svg class="art-svg" viewBox="0 0 48 48" aria-hidden="true"><use href="#vec-gift"/></svg>
+            <figcaption>Curated Gift Suites</figcaption>
+          </figure>
+          <figure class="gallery-tile reveal-up" style="--tile-bg:var(--marigold-soft);--delay:160ms;">
+            <svg class="art-svg" viewBox="0 0 48 48" aria-hidden="true"><use href="#vec-puzzle"/></svg>
+            <figcaption>Play, STEM &amp; Learn</figcaption>
+          </figure>
+          <figure class="gallery-tile reveal-up" style="--tile-bg:var(--cream);--delay:220ms;">
+            <svg class="art-svg" viewBox="0 0 48 48" aria-hidden="true"><use href="#vec-balloon"/></svg>
+            <figcaption>Celebrations &amp; Décor</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SECTION 9: FOOTER -->
+  <footer class="site-footer" id="visit">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <img class="brand-logo-img" src="images/logo-horizontal-light.webp" alt="M.S. Toys &amp; Gifts">
+        </a>
+        <p>Little joys, thoughtful gifts, and over 4,000 reasons to smile across our 3 retail stores in Ahmedabad, Gujarat.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Product Categories</h3>
+        <a href="#catalogue" onclick="setCatalogueFilter({category:'Toys'})">Toys for All Ages</a>
+        <a href="#catalogue" onclick="setCatalogueFilter({category:'Gift Items'})">Gift Items &amp; Hampers</a>
+        <a href="#catalogue" onclick="setCatalogueFilter({category:'Soft Toys'})">Soft Toys</a>
+        <a href="#catalogue" onclick="setCatalogueFilter({category:'Baby Products'})">Baby Products</a>
+        <a href="#catalogue" onclick="setCatalogueFilter({category:'Educational Toys'})">Educational Toys</a>
+        <a href="#catalogue" onclick="setCatalogueFilter({category:'Birthday Decorations'})">Birthday Decorations</a>
+        <a href="#catalogue" onclick="setCatalogueFilter({category:'Stationery & School Supplies'})">Stationery &amp; School</a>
+        <a href="#catalogue" onclick="setCatalogueFilter({category:'Home Decoration'})">Home &amp; Office Décor</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Our 3 Ahmedabad Stores</h3>
+        <a href="#stores"><strong>Shop 1:</strong> Gifts, Home &amp; Office Décor</a>
+        <a href="#stores"><strong>Shop 2:</strong> Toys for All Age Groups</a>
+        <a href="#stores"><strong>Shop 3:</strong> Grand Superstore &amp; Stationery</a>
+        <span style="margin-top:6px;color:var(--marigold);">🕘 Opening Hours:</span>
+        <span data-field="hours"><span class="val">Mon – Sun: 10:00 AM – 9:30 PM</span></span>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact &amp; Connect</h3>
+        <a data-wa data-msg="Hi M.S. Toys & Gifts! I have a question.">💬 Chat on WhatsApp</a>
+        <span data-field="phone"><span class="val">+91 79 2658 4200</span></span>
+        <span data-field="address"><span class="val">Ahmedabad, Gujarat, India</span></span>
+        <div style="display:flex;gap:14px;margin-top:8px;">
+          <a data-social="instagram" target="_blank" rel="noopener">Instagram ↗</a>
+          <a data-social="facebook" target="_blank" rel="noopener">Facebook ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <span>© <span id="year">2026</span> M.S. Toys &amp; Gifts • Ahmedabad, Gujarat, India. All rights reserved.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="modal-backdrop" id="product-detail-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Product Details">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" data-close-modal aria-label="Close modal">✕</button>
+      <div id="product-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- BULK CSV / EXCEL CATALOGUE IMPORT MODAL -->
+  <div class="modal-backdrop" id="csv-import-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Bulk CSV Catalogue Import">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" data-close-modal aria-label="Close modal">✕</button>
+      <span class="eyebrow-tag">SCALABLE CMS / CSV IMPORTER</span>
+      <h3>Bulk Import Products via CSV</h3>
+      <p style="font-size:0.92rem;color:var(--slate-muted);margin-top:6px;">
+        Upload a `.csv` file exported from Excel or paste CSV rows below to bulk-import items into the live catalogue. Supports `id,name,category,subcategory,brand,stores,price,featured,newArrival,description`.
+      </p>
+      <div style="margin-top:16px;display:grid;gap:12px;">
+        <label style="font-size:0.86rem;font-weight:600;color:var(--navy);">
+          Select CSV File:
+          <input type="file" id="csv-file-input" accept=".csv,.txt" class="catalogue-input" style="padding-left:14px;margin-top:6px;">
+        </label>
+        <label style="font-size:0.86rem;font-weight:600;color:var(--navy);">
+          Or Paste CSV Rows (Ready-to-test sample pre-filled):
+          <textarea id="csv-paste-input" rows="6" class="catalogue-input" style="padding-left:14px;margin-top:6px;font-family:monospace;font-size:0.82rem;">id,name,category,subcategory,brand,stores,price,featured,newArrival,description
+MS-5001,Deluxe Wooden Kitchen Play Studio,Toys,Roleplay & Kitchen,M.S. Atelier,shop2|shop3,₹4490,true,true,Complete wooden play kitchen with brass-finish taps and utensil set.
+MS-5002,Handcrafted Brass Diya & Urli Gift Set,Gift Items,Festival Gifting,Aura Living,shop1|shop3,₹1950,true,true,Heirloom brass urli bowl with floating floral diyas in velvet gift box.
+MS-5003,Calligraphy Fountain Pen & Wax Seal Kit,Stationery & School Supplies,Fine Writing,PaperLoom,shop3,₹1350,false,true,Brass nib fountain pen with golden marigold sealing wax stamp.</textarea>
+        </label>
+        <div class="cta-row" style="justify-content:flex-end;margin-top:8px;">
+          <button type="button" class="btn btn-outline btn-sm" data-close-modal>Cancel</button>
+          <button type="button" class="btn btn-coral btn-sm" id="run-csv-import-btn">Import Products Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Trigger -->
+  <a class="wa-float" id="wa-float" data-wa data-msg="Hi M.S. Toys & Gifts! I have a question." aria-label="Chat with us on WhatsApp" hidden>
+    <svg width="28" height="28" viewBox="0 0 24 24"><use href="#icon-wa"/></svg>
+  </a>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="app-toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

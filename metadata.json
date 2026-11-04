@@ -1,0 +1,8 @@
+{
+  "name": "MS TOY'S & GIFT'S",
+  "description": "M.S. Toys & Gifts — Premium Digital Showroom featuring 4,000+ toys, luxury gifts, home décor, and stationery across 3 flagship retail stores in Ahmedabad, Gujarat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

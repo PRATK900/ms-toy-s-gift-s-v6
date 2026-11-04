@@ -1,0 +1,5 @@
+id,name,category,subcategory,brand,stores,price,featured,newArrival,description
+MS-2001,Montessori Rainbow Stacking Tower,Educational Toys,Wooden & Montessori,M.S. Atelier Woodworks,shop2|shop3,₹1250,true,true,Handcrafted wooden rainbow arches in brand pastel tones.
+MS-2002,Luxury Housewarming Ceramic Diffuser Set,Home Decoration,Tabletop & Lamps,Aura Living Décor,shop1|shop3,₹1890,true,false,Fluted porcelain reed diffuser and brass tray in gift box.
+MS-2003,Plush Pastel Elephant Nursery Cushion,Soft Toys,Plush Companions,CuddleCraft Studio,shop2|shop3,₹990,false,true,Hypoallergenic ultra-soft baby elephant cuddle pillow.
+MS-2004,Artist 48-Piece Pastel Acrylic & Easel Box,Stationery & School Supplies,Art & School Kits,PaperLoom India,shop3,₹2150,true,true,Beechwood tabletop easel with 48 studio pigments and brushes.
