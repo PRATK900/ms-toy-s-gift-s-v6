@@ -1,6 +1,3 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { ArrowDown, MessageCircle, RotateCcw, Volume2, VolumeX, Sparkles } from 'lucide-react';
-import { BUSINESS_INFO } from '../data/stores';
 import React from 'react';
 import { ArrowDown, MessageCircle, Sparkles } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/stores';
