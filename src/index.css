@@ -63,14 +63,96 @@ html {
   background: #1D4ED8;
 }
 
-/* =========================================================================
+/* ==========================================================================
+   CLEAN, LIGHTWEIGHT STARTUP OPENING & HERO FADE-IN TRANSITIONS
+   ========================================================================== */
+
+@keyframes ms-startup-card-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.99);
+  }
+}
+
+@keyframes ms-startup-overlay-fade {
+  0%, 65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ms-homepage-smooth-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ms-gentle-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ms-startup-overlay {
+  animation: ms-startup-overlay-fade 0.62s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.ms-startup-card {
+  animation: ms-startup-card-fade 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.ms-homepage-reveal {
+  animation: ms-homepage-smooth-reveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ms-fade-in-up {
+  animation: ms-gentle-fade-up 0.48s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ms-delay-100 {
+  animation-delay: 0.08s;
+}
+
+.ms-delay-200 {
+  animation-delay: 0.16s;
+}
+
+.ms-delay-300 {
+  animation-delay: 0.24s;
+}
+
+/* ==========================================================================
    A MOVING TOY-BOX WORLD: PAGE-WIDE ANIMATED BACKGROUND
    Crisp cyan-azure canvas (#EBF8FF) with bold saturated accents:
    Saturated Turquoise (#00B4D8), Cobalt Blue (#1D4ED8), Coral Red (#EF4444),
    Sunny Yellow (#FFC300), and Violet (#7C3AED).
    Flat matte finish: NO gloss, NO shine, NO gradients fading into beige,
    NO dots, NO grids, and NO skin-like colour washes.
-   ========================================================================= */
+   ========================================================================== */
 
 /* Continuous, gentle, slow multi-depth drifts */
 @keyframes toybox-drift-1 {
@@ -175,11 +257,15 @@ html {
   transform: translate(2px, 2px);
 }
 
-/* =========================================================================
+/* ==========================================================================
    ACCESSIBILITY: RESPECT PREFERS-REDUCED-MOTION
    Freezes the toy-box world into a still, balanced artistic scene
-   ========================================================================= */
+   ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
+  .ms-startup-overlay,
+  .ms-startup-card,
+  .ms-homepage-reveal,
+  .ms-fade-in-up,
   .toybox-float-slow-1,
   .toybox-float-slow-2,
   .toybox-float-slow-3,
@@ -191,5 +277,3 @@ html {
     transform: none !important;
   }
 }
-
-
