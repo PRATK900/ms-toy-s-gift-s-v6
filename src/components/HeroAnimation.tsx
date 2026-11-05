@@ -1,7 +1,99 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { ArrowDown, MessageCircle, RotateCcw, Volume2, VolumeX, Sparkles } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/stores';
+import React from 'react';
+import { ArrowDown, MessageCircle, Sparkles } from 'lucide-react';
+import { BUSINESS_INFO } from '../data/stores';
 
+export const HeroAnimation: React.FC = () => {
+  return (
+    <section
+      className="relative min-h-[68vh] sm:min-h-[72vh] flex flex-col justify-center items-center overflow-hidden px-4 sm:px-6 pt-8 sm:pt-12 pb-10 sm:pb-14"
+      aria-label="MS Toy's & Gifts Hero Showcase"
+    >
+      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto w-full">
+        <div className="ms-fade-in-up inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border-2 border-[#18365B]/15 shadow-[2px_2px_0px_rgba(24,54,91,0.1)] mb-5 sm:mb-6">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#E63946]" aria-hidden="true" />
+          <span className="text-[11px] sm:text-xs uppercase font-extrabold tracking-widest text-[#18365B]">
+            Ahmedabad&apos;s Retail Flagship • 3 Stores Open 7 Days
+          </span>
+        </div>
+
+        <div className="ms-fade-in-up ms-delay-100 mb-5 sm:mb-7 px-6 sm:px-10 py-5 sm:py-6 rounded-3xl bg-white/95 border-2 border-[#18365B] shadow-[5px_5px_0px_#18365B] inline-flex flex-col items-center">
+          <div className="flex items-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] text-[#1F6FE0] mb-1.5">
+            <Sparkles className="w-4 h-4 text-[#FFC933] fill-[#FFC933]" aria-hidden="true" />
+            <span>Welcome to</span>
+            <Sparkles className="w-4 h-4 text-[#FFC933] fill-[#FFC933]" aria-hidden="true" />
+          </div>
+
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#18365B] font-heading leading-tight">
+            MS Toy&apos;s <span className="text-[#E63946]">&amp;</span> Gifts
+          </h1>
+
+          <div className="mt-3 flex items-center gap-1.5" aria-hidden="true">
+            <span className="w-8 sm:w-10 h-1.5 rounded-full bg-[#E63946]" />
+            <span className="w-3 sm:w-4 h-1.5 rounded-full bg-[#FFC933]" />
+            <span className="w-8 sm:w-10 h-1.5 rounded-full bg-[#1F6FE0]" />
+          </div>
+        </div>
+
+        <div className="ms-fade-in-up ms-delay-200 space-y-3 px-2 sm:px-4">
+          <p className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#18365B] font-heading">
+            Little joys. <span className="text-[#E63946]">Big smiles.</span>
+          </p>
+
+          <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-[#26384B]/85 font-medium leading-relaxed">
+            From playful toys and adorable soft toys to thoughtful gifts and everyday essentials, discover something special for every occasion across our 3 Ahmedabad showrooms.
+          </p>
+        </div>
+
+        <div className="ms-fade-in-up ms-delay-300 mt-7 sm:mt-9 flex flex-wrap items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto">
+          <a
+            href="#catalogue"
+            className="btn-toy group inline-flex items-center justify-center gap-3 w-full sm:w-auto px-7 py-3.5 sm:py-4 rounded-full bg-[#18365B] text-white font-extrabold text-base sm:text-lg border-2 border-[#0D0F1A] shadow-[4px_4px_0px_#0D0F1A] hover:bg-[#26384B]"
+          >
+            <span>Discover our collections</span>
+            <ArrowDown className="w-5 h-5 text-[#FFC933] group-hover:translate-y-1 transition-transform" />
+          </a>
+
+          <a
+            href={`https://wa.me/${BUSINESS_INFO.whatsappNumber}?text=${encodeURIComponent("Hello M.S. Toys & Gifts Ahmedabad! I would like to enquire about your store catalogue.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-toy inline-flex items-center justify-center gap-2.5 w-full sm:w-auto px-6 py-3.5 sm:py-4 rounded-full bg-[#25D366] text-[#0D0F1A] font-extrabold text-base sm:text-lg border-2 border-[#0D0F1A] shadow-[4px_4px_0px_#0D0F1A] hover:bg-[#20ba59]"
+          >
+            <MessageCircle className="w-5 h-5 fill-current" />
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+
+        <div className="ms-fade-in-up ms-delay-300 mt-8 sm:mt-10 flex flex-wrap justify-center items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-extrabold text-[#18365B]">
+          <a
+            href="#stores"
+            className="btn-toy px-3.5 sm:px-4 py-2 rounded-xl bg-white hover:bg-[#FFF3C4] border-2 border-[#18365B] shadow-[3px_3px_0px_#18365B] transition-colors flex items-center gap-2"
+          >
+            <span className="w-3 h-3 rounded-full bg-[#E63946] border border-[#0D0F1A]" />
+            Shop 1: Gifts &amp; Home Décor
+          </a>
+          <a
+            href="#stores"
+            className="btn-toy px-3.5 sm:px-4 py-2 rounded-xl bg-white hover:bg-[#EAF5FA] border-2 border-[#18365B] shadow-[3px_3px_0px_#18365B] transition-colors flex items-center gap-2"
+          >
+            <span className="w-3 h-3 rounded-full bg-[#1F6FE0] border border-[#0D0F1A]" />
+            Shop 2: Toys for All Ages
+          </a>
+          <a
+            href="#stores"
+            className="btn-toy px-3.5 sm:px-4 py-2 rounded-xl bg-white hover:bg-[#FFF3C4] border-2 border-[#18365B] shadow-[3px_3px_0px_#18365B] transition-colors flex items-center gap-2"
+          >
+            <span className="w-3 h-3 rounded-full bg-[#FFC933] border border-[#0D0F1A]" />
+            Shop 3: Mega Store &amp; Stationery
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
 interface Particle {
   kind: 'confetti' | 'dust';
   x: number;
